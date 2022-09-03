@@ -1,0 +1,32 @@
+{
+  "name": "tauri-react-ts",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build:tailwind": "tailwindcss -i src/tailwind.css -o src/tailwind.output.css --minify --watch",
+    "build:tailwind-production": "tailwindcss -i src/tailwind.css -o src/tailwind.output.css --minify",
+    "dev-vite": "vite & pnpm build:tailwind",
+    "dev": "pnpm tauri dev",
+    "build-vite": "NODE_ENV=production pnpm build:tailwind-production && tsc && vite build",
+    "build": "pnpm tauri build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^1.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.0.5",
+    "@types/node": "^18.7.14",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.0.1",
+    "autoprefixer": "^10.4.8",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.7"
+  }
+}
